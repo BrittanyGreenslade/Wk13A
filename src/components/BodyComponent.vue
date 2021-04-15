@@ -1,30 +1,20 @@
 <template>
+  <!-- vbase-css to autofill -->
   <div>
+    <!-- things in html of this component -->
+    <br /><br />
     <p>This and the following are part of the the body</p>
-    <!-- <div>
-      <h2>Meet the team:</h2>
-      <img
-        alt="Josh the Doodle"
-        src="https://www.storytrender.com/wp-content/uploads/2019/08/CATERS_DISABLED_GOLDEN_DOODLE_03.jpg"
-      />
-    </div> -->
-    <!-- <div>
-      <h2>
-        Fun
-      </h2>
-      <img
-        src="https://skatehut.images.blucommerce.com/skatehut/Blog/Arbor_LongB_1704_1.jpg?auto=format%2Ccompress&w=750&h=620&fit=fillmax&fill=solid&s=83970302f5da0cdb6420ccfaef9fc0fe"
-        alt="longboards in a row"
-      />
-    </div> -->
     <div id="sectionContainer">
       <div>
         <div>
+          <!-- using the team component in this place in the html of the body -->
           <team-component />
+          <!-- using the fun component in this place in the html of the body -->
           <fun-component />
         </div>
       </div>
       <div id="pageRight">
+        <!-- using the side bar component in this place in the html of the body -->
         <side-bar-component />
       </div>
     </div>
@@ -32,12 +22,16 @@
 </template>
 
 <script>
+//importing the sub components of this page
 import FunComponent from "./FunComponent";
 import TeamComponent from "./TeamComponent.vue";
 import SideBarComponent from "./SideBarComponent.vue";
+//register the new components in this page so we can use it in our HTML
 export default {
+  //register this component for use when exporting
   name: "body-component",
   components: {
+    //resgister the components within this component
     TeamComponent,
     FunComponent,
     SideBarComponent,
@@ -45,6 +39,7 @@ export default {
 };
 </script>
 <style scoped>
+/* styling for THIS component only */
 #sectionContainer {
   display: grid;
   place-items: center;

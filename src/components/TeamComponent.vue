@@ -1,4 +1,5 @@
 <template>
+  <!-- sub-component within the body use vbase-css to autofill -->
   <div>
     <div>
       <h2>Meet the team:</h2>
@@ -12,6 +13,7 @@
 
 <script>
 export default {
+  //name of this component for use when exporting
   name: "team-component",
 };
 </script>
